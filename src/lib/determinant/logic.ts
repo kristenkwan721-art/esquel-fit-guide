@@ -122,12 +122,12 @@ function seasonName(s: Season) {
   return ({ spring: "春季", summer: "夏季", autumn: "秋季", winter: "冬季" } as const)[s];
 }
 function seasonItems(s: Season): string[] {
-  return ({
+  return ([...({
     spring: ["轻薄风衣", "棉麻长袖衬衫", "锥形九分裤", "皮革乐福鞋"],
     summer: ["凉感 Polo", "亚麻短袖衬衫", "速干休闲短裤", "帆布鞋"],
     autumn: ["羊毛针织衫", "灯芯绒衬衫", "锥形羊毛长裤", "皮靴"],
     winter: ["羊绒高领", "驼色长大衣", "羊毛西裤", "切尔西靴"],
-  } as const)[s];
+  } as const)[s]]);
 }
 
 export function autoSeason(): Season {
